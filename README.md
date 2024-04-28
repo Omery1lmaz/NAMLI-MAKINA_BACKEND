@@ -1,3 +1,1 @@
 # namli-makina-backend
-# VML_GUESS_WHO_BACKEND
-# VML_GUESS_WHO_BACKEND
