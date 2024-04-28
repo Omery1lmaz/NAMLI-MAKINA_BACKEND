@@ -19,7 +19,7 @@ import { createToken } from "./utils/jwt";
 const app = express();
 connectDB();
 app.use(cookieParser());
-app.use(cors({ origin: "http://localhost:3001", credentials: true }));
+app.use(cors({ origin: "http://localhost:4002", credentials: true }));
 // app.use(express.cookieParser());
 
 dotenv.config();
@@ -73,7 +73,7 @@ passport.deserializeUser((user: Express.User, done: VerifyCallback) => {
   done(null, user);
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4002;
 app.use("/api/auth", authRoutes);
 app.use((req, res, next) => {
   res.locals.user = req.user || null;

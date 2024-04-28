@@ -356,7 +356,7 @@ export const resetPasswordEmail = async (
           expiresIn: maxAge,
         });
 
-        const url = `http://localhost:3000/users/${user._id}/reset-password/${token}`;
+        const url = `http://localhost:3001/users/${user._id}/reset-password/${token}`;
         try {
           const transporter = nodemailer.createTransport({
             service: "gmail",

@@ -1,17 +1,17 @@
-import moongose from "mongoose";
+import mongoose from "mongoose";
 
 const connectDB = async () => {
-  const connectionParams: any = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  };
+  // const connectionParams: mongoose.ConnectOptions = {
+  //   useNewUrlParser: true,
+  //   useUnifiedTopology: true,
+  // }; 
   try {
-    await moongose.connect(
+    await mongoose.connect(
       "mongodb+srv://namlimakinadatabase:6tVhSHxwEcqh9dXa@cluster0.bu9tqw4.mongodb.net/?retryWrites=true&w=majority",
-      connectionParams
     );
     console.log("Connected to MongoDB");
   } catch (err) {
+    console.error("Error connecting to MongoDB:", err);
     process.exit(1);
   }
 };

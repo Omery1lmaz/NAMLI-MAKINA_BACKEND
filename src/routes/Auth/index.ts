@@ -153,7 +153,7 @@ router.get("/user-details-google", (req: Request, res: Response) => {
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "http://localhost:3000/api/auth/setCookie",
+    successRedirect: "http://localhost:4002/api/auth/setCookie",
     failureRedirect: "/login/failed",
   })
 );
